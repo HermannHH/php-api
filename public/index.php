@@ -1,6 +1,6 @@
 <?php
 
-include_once('../src/controllers/transactions_controller.php');
+include '../src/controllers/transactions_controller.php';
 
 use src\controllers\TransactionsController;
 

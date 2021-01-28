@@ -17,15 +17,18 @@ class TransactionsController {
     {
         switch ($this->requestMethod) {
             case 'GET':
-              $response = $this->getAllTransactions();
+                $response = $this->getAllTransactions();
             default:
+                // var_dump($this->requestMethod);
                 $response = $this->notFoundResponse();
                 break;
         }
-        header($response['status_code_header']);
-        if ($response['body']) {
-            echo $response['body'];
-        }
+        // header($response['status_code_header']);
+        // if ($response['body']) {
+        //     echo $response['body'];
+        // }
+        var_dump($this->requestMethod);
+        // echo $response['body'];
     }
 
     private function getAllTransactions()
