@@ -17,7 +17,7 @@ class TransactionsController {
     {
         switch ($this->requestMethod) {
             case 'GET':
-
+              $response = $this->getAllTransactions();
             default:
                 $response = $this->notFoundResponse();
                 break;
@@ -31,7 +31,9 @@ class TransactionsController {
     private function getAllTransactions()
     {
         $response['status_code_header'] = 'HTTP/1.1 200 OK';
-        $response['body'] = 'hello world';
+        $response['body'] = json_encode([
+            'message' => 'Hello World'
+        ]);
         return $response;
     }
 

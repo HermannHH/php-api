@@ -1,7 +1,8 @@
 <?php
 
-require_once('../src/controllers/transactions_controller.php');
-use src\controller\transactions_controller;
+include_once('../src/controllers/transactions_controller.php');
+
+use src\controllers\TransactionsController;
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
